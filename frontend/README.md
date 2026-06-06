@@ -2,7 +2,7 @@
 
 Nueva página web para **Canarias Luxury**, empresa de alquiler de villas vacacionales de lujo en Gran Canaria.
 
-El objetivo del proyecto es crear una web moderna, rápida, mantenible y editable por nosotros, sin depender del código de la web anterior.
+El objetivo del proyecto es crear una web moderna, rápida, mantenible y editable por nosotros.
 
 ---
 
@@ -24,31 +24,6 @@ El objetivo del proyecto es crear una web moderna, rápida, mantenible y editabl
 
 * **ESLint**
   Herramienta para detectar errores y mejorar la calidad del código.
-
----
-
-## Estructura inicial del proyecto
-
-```txt
-webcl/
-├── README.md
-├── frontend/
-│   ├── public/
-│   │   ├── logo/
-│   │   ├── villas/
-│   │   └── img alargadas/
-│   ├── src/
-│   │   └── app/
-│   ├── package.json
-│   └── README.md
-└── .git/
-```
-
-La aplicación principal está dentro de la carpeta:
-
-```txt
-frontend/
-```
 
 ---
 
@@ -273,45 +248,3 @@ npm run dev
 
 ```txt
 http://localhost:3000
-```
-
-8. Hacer cambios.
-9. Revisar que todo funciona.
-10. Guardar cambios con Git:
-
-```bash
-git add .
-git commit -m "Descripción del cambio"
-```
-
----
-
-## Notas importantes
-
-* El código principal está dentro de `frontend/`.
-* Las imágenes públicas se guardan dentro de `frontend/public/`.
-* No se recomienda trabajar el proyecto dentro de `C:\Users\...`.
-* Es mejor mantener el proyecto dentro de Linux/WSL:
-
-```txt
-/home/wsl/proyectos/webcl
-```
-
-* No instalar librerías adicionales sin revisar si son realmente necesarias.
-* No añadir todavía base de datos, backend ni Docker hasta tener una primera versión visual estable.
-
----
-
-## Objetivo de la primera versión
-
-La primera versión de la web debe incluir:
-
-* Página de inicio moderna.
-* Diseño responsive para móvil y ordenador.
-* Cabecera con navegación.
-* Hero principal con imagen destacada.
-* Tarjetas de villas.
-* Sección de ventajas.
-* Llamada a contacto o reserva.
-* Pie de página.
-* Código simple, limpio y fácil de modificar.
