@@ -1,36 +1,317 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Canarias Luxury Web
 
-## Getting Started
+Nueva página web para **Canarias Luxury**, empresa de alquiler de villas vacacionales de lujo en Gran Canaria.
 
-First, run the development server:
+El objetivo del proyecto es crear una web moderna, rápida, mantenible y editable por nosotros, sin depender del código de la web anterior.
+
+---
+
+## Tecnologías utilizadas
+
+### Frontend
+
+* **Next.js**
+  Framework de React para crear aplicaciones web modernas.
+
+* **React**
+  Librería para crear interfaces de usuario mediante componentes.
+
+* **TypeScript**
+  JavaScript con tipado, para escribir código más seguro y fácil de mantener.
+
+* **Tailwind CSS**
+  Framework de estilos basado en clases utilitarias.
+
+* **ESLint**
+  Herramienta para detectar errores y mejorar la calidad del código.
+
+---
+
+## Estructura inicial del proyecto
+
+```txt
+webcl/
+├── README.md
+├── frontend/
+│   ├── public/
+│   │   ├── logo/
+│   │   ├── villas/
+│   │   └── img alargadas/
+│   ├── src/
+│   │   └── app/
+│   ├── package.json
+│   └── README.md
+└── .git/
+```
+
+La aplicación principal está dentro de la carpeta:
+
+```txt
+frontend/
+```
+
+---
+
+## Requisitos previos
+
+Para trabajar con este proyecto se recomienda usar:
+
+* Windows 10/11
+* WSL2
+* Ubuntu 24.04 LTS
+* Visual Studio Code
+* Extensión **WSL** de VS Code
+* Node.js instalado mediante **NVM**
+* Git
+
+---
+
+## Instalación del entorno en WSL
+
+Entrar en Ubuntu desde PowerShell:
+
+```bash
+wsl
+```
+
+Actualizar Ubuntu:
+
+```bash
+sudo apt update
+sudo apt upgrade -y
+```
+
+Instalar herramientas básicas:
+
+```bash
+sudo apt install -y curl build-essential git
+```
+
+---
+
+## Instalación de NVM y Node.js
+
+Instalar NVM:
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.5/install.sh | bash
+```
+
+Recargar la terminal:
+
+```bash
+source ~/.bashrc
+```
+
+Comprobar que NVM funciona:
+
+```bash
+command -v nvm
+```
+
+Instalar Node.js LTS:
+
+```bash
+nvm install --lts
+nvm alias default lts/*
+nvm use --lts
+```
+
+Comprobar versiones:
+
+```bash
+node --version
+npm --version
+```
+
+---
+
+## Instalar dependencias del proyecto
+
+Desde la raíz del proyecto:
+
+```bash
+cd ~/proyectos/webcl/frontend
+```
+
+Instalar dependencias:
+
+```bash
+npm install
+```
+
+---
+
+## Levantar el proyecto en desarrollo
+
+Desde la carpeta `frontend`:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Después abrir en el navegador:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```txt
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Para detener el servidor:
 
-## Learn More
+```txt
+Ctrl + C
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Abrir el proyecto en VS Code
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Desde la raíz del proyecto:
 
-## Deploy on Vercel
+```bash
+cd ~/proyectos/webcl
+code .
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+En la esquina inferior izquierda de VS Code debería aparecer:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```txt
+WSL: Ubuntu-24.04
+```
+
+Esto confirma que se está trabajando dentro de WSL.
+
+---
+
+## Comandos útiles
+
+Entrar en la carpeta del frontend:
+
+```bash
+cd ~/proyectos/webcl/frontend
+```
+
+Arrancar servidor de desarrollo:
+
+```bash
+npm run dev
+```
+
+Generar versión de producción:
+
+```bash
+npm run build
+```
+
+Ejecutar versión de producción localmente:
+
+```bash
+npm run start
+```
+
+Revisar errores de estilo y código:
+
+```bash
+npm run lint
+```
+
+Ver estado de Git:
+
+```bash
+git status
+```
+
+Añadir cambios:
+
+```bash
+git add .
+```
+
+Crear commit:
+
+```bash
+git commit -m "Mensaje del cambio"
+```
+
+Ver historial de commits:
+
+```bash
+git log --oneline
+```
+
+---
+
+## Flujo recomendado de trabajo
+
+1. Abrir Ubuntu/WSL.
+2. Ir a la carpeta del proyecto:
+
+```bash
+cd ~/proyectos/webcl
+```
+
+3. Abrir VS Code:
+
+```bash
+code .
+```
+
+4. Abrir una terminal en VS Code.
+5. Entrar en el frontend:
+
+```bash
+cd frontend
+```
+
+6. Arrancar el proyecto:
+
+```bash
+npm run dev
+```
+
+7. Ver la web en:
+
+```txt
+http://localhost:3000
+```
+
+8. Hacer cambios.
+9. Revisar que todo funciona.
+10. Guardar cambios con Git:
+
+```bash
+git add .
+git commit -m "Descripción del cambio"
+```
+
+---
+
+## Notas importantes
+
+* El código principal está dentro de `frontend/`.
+* Las imágenes públicas se guardan dentro de `frontend/public/`.
+* No se recomienda trabajar el proyecto dentro de `C:\Users\...`.
+* Es mejor mantener el proyecto dentro de Linux/WSL:
+
+```txt
+/home/wsl/proyectos/webcl
+```
+
+* No instalar librerías adicionales sin revisar si son realmente necesarias.
+* No añadir todavía base de datos, backend ni Docker hasta tener una primera versión visual estable.
+
+---
+
+## Objetivo de la primera versión
+
+La primera versión de la web debe incluir:
+
+* Página de inicio moderna.
+* Diseño responsive para móvil y ordenador.
+* Cabecera con navegación.
+* Hero principal con imagen destacada.
+* Tarjetas de villas.
+* Sección de ventajas.
+* Llamada a contacto o reserva.
+* Pie de página.
+* Código simple, limpio y fácil de modificar.
