@@ -16,7 +16,7 @@ export default function Home() {
         <Advantages />
         <PremiumExperience />
         <ContactCta />
-      </main>
+    </main>
       <Footer />
     </>
   );
